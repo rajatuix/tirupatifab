@@ -12,19 +12,16 @@
     --font-family: 'Montserrat', 'Andika', sans-serif;
 }
 
-/* Base Reset & Mobile-First */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Mobile-First Base Styles */
 body {
     background: linear-gradient(120deg, #181818 0%, #232526 100%);
     min-height: 100vh;
@@ -82,7 +79,7 @@ header::before {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url('headerIMG.jpg');
+    background-image: url('https://res.cloudinary.com/dh7rosbw1/image/upload/v1756572233/headerIMG_ro2hd1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
