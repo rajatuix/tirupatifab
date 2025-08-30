@@ -491,7 +491,7 @@ ul li:hover::before {
     }
 
     hr:hover{
-        width: 100%;
+        width: 90%;
     }
 
 .btn::before {
@@ -601,7 +601,7 @@ footer {
     }
 
     hr:hover{
-        width: 100%;
+        width: 90%;
     }
 
     h2 {
