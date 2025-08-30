@@ -35,6 +35,20 @@ body {
     position: relative;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 214, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 179, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 214, 0, 0.06) 0%, transparent 50%);
+    z-index: -1;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+}
 
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -104,6 +118,7 @@ header h1 {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: none;
     background-clip: text;
     position: relative;
     z-index: 1;
@@ -136,6 +151,10 @@ header p {
     z-index: 1;
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45), 0 1px 0 #000;
     animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+h1{
+    border: none;
 }
 
 @keyframes fadeInUp {
