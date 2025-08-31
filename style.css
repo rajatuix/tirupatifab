@@ -211,7 +211,7 @@ h2:hover {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/*Card Sections */
+/*Card Section */
 .about,
 .services,
 .whyus,
@@ -237,7 +237,6 @@ h2:hover {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* animation delays for sections */
 .services { animation-delay: 0.2s; }
 .whyus { animation-delay: 0.4s; }
 .about { animation-delay: 0.6s; }
@@ -251,7 +250,6 @@ h2:hover {
     }
 }
 
-/* hover animations with micro-interactions */
 .about:hover,
 .services:hover,
 .whyus:hover,
@@ -452,7 +450,6 @@ ul li:nth-child(4) { animation: listItemFadeIn 0.6s ease-out 1.1s forwards; }
     border: 2px solid var(--accent-color);
 }
 
-/* Professional button shine effect */
 .btn::before {
     content: '';
     position: absolute;
@@ -481,7 +478,6 @@ ul li:nth-child(4) { animation: listItemFadeIn 0.6s ease-out 1.1s forwards; }
     transition-duration: 0.1s;
 }
 
-/* HR Styles */
 hr {
     margin: 1rem auto;
     width: 60px;
@@ -496,7 +492,6 @@ hr:hover {
     width: 120px;
 }
 
-/* Paragraph Styles */
 p {
     font-family: 'Andika', sans-serif;
     font-size: 1rem;
@@ -505,7 +500,6 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Contact Links */
 .contact a {
     color: var(--accent-color);
     text-decoration: none;
@@ -523,7 +517,6 @@ p {
     border-bottom-color: var(--accent-color);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -537,7 +530,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Scroll Animation System - Optional Enhancement */
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
@@ -561,7 +553,6 @@ footer {
     transform: translate(0, 0);
 }
 
-/* Professional parallax scroll effect */
 @media (min-width: 1024px) {
     .about,
     .services,
@@ -576,7 +567,6 @@ footer {
     }
 }
 
-/* Focus States for Accessibility */
 .btn:focus,
 a:focus {
     color: white;
@@ -584,7 +574,6 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -598,7 +587,6 @@ a:focus {
         scroll-behavior: auto;
     }
     
-    /* Make content immediately visible for accessibility */
     .about,
     .services,
     .whyus,
@@ -612,12 +600,10 @@ a:focus {
         animation: none !important;
     }
     
-    /* Remove floating particles for motion sensitivity */
     body::before {
         display: none;
     }
     
-    /* Remove breathing effect */
     .about,
     .services,
     .whyus,
@@ -627,7 +613,6 @@ a:focus {
     }
 }
 
-/* Mobile Styles (320px - 767px) */
 @media (max-width: 767px) {
     body {
         font-size: 0.9rem;
@@ -692,7 +677,6 @@ a:focus {
         margin-top: 1rem;
     }
 
-    /* Mobile touch interactions */
     .about:active,
     .services:active,
     .whyus:active,
@@ -705,7 +689,6 @@ a:focus {
         transform: scale(1.05);
     }
 
-    /* Reduce scroll animation distance on mobile - only if using JS animations */
     .scroll-animate {
         transform: translateY(20px);
     }
@@ -719,7 +702,6 @@ a:focus {
     }
 }
 
-/* Tablet Styles (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .services-img {
         display: none;
@@ -806,7 +788,6 @@ a:focus {
     }
 }
 
-/* Desktop Styles (1024px+) */
 @media (min-width: 1024px) {
     header {
         height: 50vh;
@@ -875,7 +856,6 @@ a:focus {
     }
 }
 
-/* Large Desktop Styles (1440px+) */
 @media (min-width: 1440px) {
     section {
         width: 85%;
@@ -903,7 +883,6 @@ a:focus {
     }
 }
 
-/* Ultra-wide Desktop (1920px+) */
 @media (min-width: 1920px) {
     section {
         width: 80%;
