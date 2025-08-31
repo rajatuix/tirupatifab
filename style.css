@@ -25,7 +25,8 @@ html {
 body {
     background: linear-gradient(120deg, #181818 0%, #232526 100%);
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     line-height: 1.6;
     color: var(--main-color);
     font-family: var(--font-family);
@@ -37,11 +38,12 @@ body {
 
 header {
     width: 100%;
+    max-width: 100%;
     height: 50vh;
     min-height: 300px;
     background: transparent;
     color: var(--accent-color);
-    padding: 20px 6vw;
+    padding: 20px 4vw;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -145,7 +147,7 @@ section {
     width: 100%;
     max-width: 1000px;
     min-width: 0;
-    padding: 20px 6vw;
+    padding: 20px 4vw;
     margin: 20px auto;
     box-sizing: border-box;
     position: relative;
@@ -171,7 +173,7 @@ h2:hover {
     color: #fff;
 }
 
-/*  Scroll reveal animations */
+/* Scroll reveal animations */
 .about,
 .services,
 .whyus,
@@ -179,7 +181,7 @@ h2:hover {
 .contact {
     background: var(--glass-bg);
     border-radius: 12px;
-    padding: 24px 6vw;
+    padding: 24px 4vw;
     margin: 24px auto;
     box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.15);
     box-sizing: border-box;
@@ -198,13 +200,13 @@ h2:hover {
     transform: translateX(-60px);
 }
 
-/* Alternate sections from right */
+/* Alternate Sections from right */
 .services,
 .hr {
     transform: translateX(60px);
 }
 
-/* Reveal classes */
+/* Scroll reveal classes */
 .scroll-reveal {
     opacity: 1;
     transform: translateX(0);
@@ -271,8 +273,9 @@ h2:hover {
     align-items: stretch;
     margin: 24px auto;
     max-width: 100%;
-    padding: 0 6vw;
+    padding: 0 4vw;
     width: 100%;
+    max-width: 1000px;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.4s ease;
@@ -415,12 +418,15 @@ p {
 
 footer {
     text-align: center;
-    padding: 24px 6vw;
+    padding: 24px 4vw;
     background: rgba(0, 0, 0, 0.3);
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Andika', sans-serif;
     font-size: 1rem;
     backdrop-filter: blur(5px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -666,18 +672,19 @@ footer {
     }
 }
 
+/* Scroll reveal system */
 .scroll-hidden {
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-40px);
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .scroll-hidden.from-right {
-    transform: translateX(60px);
+    transform: translateX(40px);
 }
 
 .scroll-hidden.from-bottom {
-    transform: translateY(40px);
+    transform: translateY(30px);
 }
 
 .scroll-reveal-left {
@@ -695,6 +702,42 @@ footer {
     transform: translateY(0);
 }
 
+/* Ensure no horizontal overflow on any element */
+* {
+    max-width: 100%;
+}
+
+/* Container constraints for mobile */
+@media (max-width: 767px) {
+    section,
+    .about,
+    .services,
+    .whyus,
+    .hr,
+    .contact,
+    .designImg {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Reduce scroll animation distance on mobile */
+    .scroll-hidden {
+        transform: translateX(-30px);
+    }
+    
+    .scroll-hidden.from-right {
+        transform: translateX(30px);
+    }
+    
+    .scroll-hidden.from-bottom {
+        transform: translateY(20px);
+    }
+}
+
+/* Focus States for Accessibility */
 .btn:focus,
 a:focus {
     color: white;
@@ -702,6 +745,7 @@ a:focus {
     outline-offset: 2px;
 }
 
+/* Accessibility - Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -712,6 +756,7 @@ a:focus {
     }
 }
 
+/* Mobile touch interactions */
 @media (max-width: 767px) {
     .about:active,
     .services:active,
@@ -720,11 +765,10 @@ a:focus {
     .contact:active {
         transform: scale(0.98);
     }
-    
     .services-img{
-        display: none;
+        display: none;;
     }
-
+    
     .designImg img:active {
         transform: scale(1.05);
     }
